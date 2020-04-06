@@ -71,11 +71,23 @@ body{
   font-size: 15px;
   border: 2px solid black;
   box-shadow: 9px 5px 10px -1px rgba(0, 0, 0, 0.445);
-
 }
 
 .searchButton:hover{
   background-color: black;
+  color: white;
+}
+
+.clearButton{
+  padding: 10px 30px;
+  border-radius: 5px;
+  font-size: 15px;
+  border: 2px solid black;
+  box-shadow: 9px 5px 10px -1px rgba(0, 0, 0, 0.445);
+}
+
+.clearButton:hover{
+  background-color: red;
   color: white;
 }
 

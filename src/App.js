@@ -11,10 +11,14 @@ function App() {
   const [latest, setLatest] = React.useState([]);
   const [results, setResults] = React.useState([]);
   const [searchCountry, setSearchCountry] = React.useState('')
+  const [typedCountry, setTypedCountry] = React.useState('')
+
 
   const handleSearch = (e) =>{
-    setSearchCountry(e.target.value)
+    setTypedCountry(e.target.value)
   }
+
+
 
   useEffect(() =>{
     axios
@@ -34,6 +38,15 @@ function App() {
     return searchCountry !== '' ? item.country.toLowerCase() === searchCountry.toLowerCase() : item
   });
 
+  const typedSearch = () => {
+    setSearchCountry(typedCountry)
+  };
+
+  const reset = () => {
+    setSearchCountry('');
+    setTypedCountry('');
+  }
+
   const countries = filterCountry.map(result => {
     return(
       <Countries 
@@ -52,7 +65,7 @@ function App() {
     <div className="App">
       <h1 className= "title">COVID-19 Live Tracker</h1>
       <Worldcases cases = {latest.cases} recoveries = {latest.recovered} deaths = {latest.deaths} updated = {lastUpdated} />
-      <Search onChange = {handleSearch} value = {searchCountry} onClick = {filterCountry} />
+      <Search onChange = {handleSearch} value = {typedCountry} onClick = {typedSearch} onDoubleClick = {reset} />
       <div className= 'worldstats'>{countries}</div>
     </div>
   );
