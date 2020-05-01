@@ -1,5 +1,21 @@
 import axios from "axios";
 
+// const newsUrl = 
+//   "https://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=d6267d68d70b48f9b357ce1c4cec5e14"
+
+//   export const fetchNews = async () => {
+//     try {
+//       const {
+//         data: { articles }
+//       } = await axios.get(newsUrl)
+
+//       return { articles };
+//     } catch (error) {
+//       console.log("jp: line 14 api.js there is an error", error.message );
+//     }
+//   }
+
+
 const url = "https://covid19.mathdro.id/api";
 
 export const fetchData = async country => {
@@ -20,7 +36,7 @@ export const fetchData = async country => {
 export const fetchDailyData = async () => {
   try {
     const { data } = await axios.get(`${url}/daily`);
-    //console.log(data);
+    console.log("line 23 index.js in api folder", data);
     const modifiedData = data.map(dailyData => ({
       confirmed: dailyData.confirmed.total,
       deaths: dailyData.deaths.total,

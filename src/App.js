@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from "./App.module.css";
-
+// import News from "./components/News/News"
 // import axios from "axios";
 // import Search from './components/Search'
 // import Countries from './components/Countries'
@@ -31,7 +31,7 @@ class App extends React.Component {
     });
   };
   render() {
-    const { data, country } = this.state;
+    const { data } = this.state;
     return (
       <div className={styles.container}>
         <img
