@@ -5,6 +5,8 @@ import styles from "./App.module.css";
 // import Search from './components/Search'
 // import Countries from './components/Countries'
 // import Worldcases from './components/Worldcases'
+
+import Symptoms from './components/Symptoms/Symptoms'
 import './App.css';
 
 import { fetchData } from './api/index'
@@ -42,6 +44,7 @@ class App extends React.Component {
         <CountryPicker handleCountryChange={this.handleCountryChange} />
         <Cards data={data} />
         {/* <Chart data={data} country={country} /> */}
+        <Symptoms />
       </div>
     );
   }

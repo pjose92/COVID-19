@@ -1,0 +1,25 @@
+.thumbnail-icon {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+  }
+  
+  .navLink {
+    color: blue;
+    font-size: 15px;
+    line-height: 150%;
+    padding: 20px;
+    font-family: "Lucida Console", Courier, monospace;
+  }
+
+  img {
+    width: 25%;
+    float: left;
+    padding: 5px;
+  }
+
+  .sympt-area {
+      padding-top: 200px;
+      margin-top: 200px;
+  }
+
